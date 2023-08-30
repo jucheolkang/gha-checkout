@@ -6,6 +6,6 @@ jobs :
     steps:
       - uses: actions/checkout@v3
         with :
-          repository: actions/chekout
+          repository: actions/checkout
           ref: v3
       - run: ls -al
