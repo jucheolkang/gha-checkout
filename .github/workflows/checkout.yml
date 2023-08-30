@@ -6,7 +6,6 @@ jobs :
     steps:
       - run: ls -al
       - uses: actions/checkout@v3
-        with : 
-          path : our-source
-      - run : ls -al our-source
-      - run : cat our-source/.github/workflows/checkout.yml
+        with :
+          fetch-depth: 3 # 최신 3개를 내려 받는다
+      - run : git log --pretty=online
